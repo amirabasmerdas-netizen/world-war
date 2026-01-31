@@ -1,3 +1,4 @@
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 from config import MOTHER_BOT_TOKEN, OWNER_ID, WEBHOOK_URL
@@ -33,3 +34,4 @@ app.run_webhook(listen="0.0.0.0",
                 port=int(os.environ.get("PORT", 8443)),
                 url_path=MOTHER_BOT_TOKEN,
                 webhook_url=f"{WEBHOOK_URL}/{MOTHER_BOT_TOKEN}")
+
